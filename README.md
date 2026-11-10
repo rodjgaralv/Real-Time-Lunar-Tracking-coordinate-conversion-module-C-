@@ -12,11 +12,6 @@ This is a 2022 university project, kept as-is. Known issues:
   `acos`, which only returns values in [0, π], so RA is wrong for objects
   in the east (azimuth < 180°). The test value (az = 253.24°) lies in the
   west and works. `raDec2AltAz` handles the sign through `sin(HA)`.
-- **`coordLST` return type.** It is declared `double` but returns nothing;
-  results are passed through the output pointer. It should be `void`.
-- **Ineffective range calls.** Several calls to `range_radians(X)` discard the
-  returned value, so they have no effect.
-- **Non-standard `main`.** `void main()` should be `int main()`.
 - **Fixed observer location.** Latitude and longitude are hard-coded (León, Spain).
 
 
